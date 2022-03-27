@@ -25,16 +25,26 @@ class CardHome extends StatelessWidget {
   Card HomeCard() {
     return Card(
       elevation: 5,
-
       child: Container(
         height: 150,
         // child: dataSetKrim(),
-        child: Stack(
-          children: [
-            dataBackground(),
-            dataSetKrim(),
-          ],
+        child: Container(
+          //padding: EdgeInsets.all(20),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Container(
+              width: 150,
+              // color: Colors.red,
+              child: Stack(
+                children: [
+                  dataBackground(),
+                  dataSetKrim(),
+                ],
+              ),
+            ),
+          ),
         ),
+
         //margin: const EdgeInsets.all(5),
         // child: const Icon(Icons.account_box)
       ),

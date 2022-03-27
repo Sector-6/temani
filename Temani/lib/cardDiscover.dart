@@ -10,9 +10,12 @@ class CardDiscover extends StatelessWidget {
     return SafeArea(
       // backgroundColor: Colors.transparent,
       child: Container(
-        margin: const EdgeInsets.all(10),
+        margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Row(
+          // scrollDirection: Axis.horizontal,
           children: <Widget>[
+            DiscoverCard(Icons.adb, "Informations"),
+            DiscoverCard(Icons.adb, "Informations"),
             DiscoverCard(Icons.adb, "Informations"),
             DiscoverCard(Icons.adb, "Informations"),
             DiscoverCard(Icons.adb, "Informations"),
@@ -27,30 +30,39 @@ class CardDiscover extends StatelessWidget {
   // ignore: non_constant_identifier_names
   Card DiscoverCard(IconData iconData, String text) {
     return Card(
+      semanticContainer: true,
+      clipBehavior: Clip.antiAliasWithSaveLayer,
       elevation: 5,
-
+      margin: EdgeInsets.all(10),
+      // child: Stack(),
       child: Container(
         height: 190,
         width: 131,
-        // color: Colors.white,
-        // margin: const EdgeInsets.all(0),
-        child: Column(children: [
-          Icon(
-            iconData,
-            size: 40,
-          ),
+        child: Stack(children: [
+          // Container(
+          //   // constraints: const BoxConstraints.expand(),
+          //   decoration: const BoxDecoration(
+          //       image: DecorationImage(
+          //           image: AssetImage("images/foto1.jpg"), fit: BoxFit.cover)),
+          // ),
           Container(
-            margin: EdgeInsets.all(5),
-            child: Text(
-              text,
-              style: const TextStyle(fontSize: 8),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: FractionalOffset.topRight,
+                  end: FractionalOffset.bottomLeft,
+                  colors: [
+                    Color(0xff6096FD).withOpacity(0.1),
+                    Color(0xff6096FD).withOpacity(0.7),
+                    Color(0xff031B88).withOpacity(0.9),
+                  ],
+                  stops: [
+                    0.0,
+                    0.78,
+                    1.0,
+                  ]),
             ),
           ),
         ]),
-
-        //child: dataSetKrim(),
-        //margin: const EdgeInsets.all(5),
-        // child: const Icon(Icons.account_box)
       ),
       //const Text("Account Box")
       shape: RoundedRectangleBorder(

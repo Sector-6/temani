@@ -33,7 +33,7 @@ class _dataBackgroundState extends State<dataBackground> {
                 cornerStyle: CornerStyle.bothCurve,
                 // radius: '80%',
                 trackColor: Colors.transparent,
-                gap: '12%',
+                // gap: '12%',
                 trackBorderColor: Colors.white,
                 dataSource: _chartData,
                 xValueMapper: (GDPData data, _) => data.continent,
@@ -51,8 +51,10 @@ class _dataBackgroundState extends State<dataBackground> {
   List<GDPData> getChartData() {
     final List<GDPData> chartData = [
       GDPData('Haikal', 75, Color(0xFFC4C4C4)),
-      GDPData('Hilmi', 75, Color(0xFFC4C4C4)),
+      GDPData('Hilmi', 0, Color(0xFFC4C4C4)),
       GDPData('Daniyal', 75, Color(0xFFC4C4C4)),
+      GDPData('Hilami', 0, Color(0xFFC4C4C4)),
+      GDPData('Daniyaal', 75, Color(0xFFC4C4C4)),
     ];
     return chartData;
   }

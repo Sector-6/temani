@@ -36,14 +36,14 @@ class _dataSetKrimState extends State<dataSetKrim> {
                 cornerStyle: CornerStyle.bothCurve,
                 // radius: '80%',
                 trackColor: Colors.transparent,
-                gap: '12%',
+                // gap: '12%',
                 trackBorderColor: Colors.white,
                 dataSource: _chartData,
                 xValueMapper: (GDPData data, _) => data.continent,
                 yValueMapper: (GDPData data, _) => data.gdp,
                 sortingOrder: SortingOrder.ascending,
                 enableTooltip: true,
-                maximumValue: 4000),
+                maximumValue: 100),
           ],
         ),
       ),
@@ -52,9 +52,11 @@ class _dataSetKrimState extends State<dataSetKrim> {
 
   List<GDPData> getChartData() {
     final List<GDPData> chartData = [
-      GDPData('Haikal', 1600),
-      GDPData('Hilmi', 2490),
-      GDPData('Daniyal', 2900),
+      GDPData('Haikal', 55),
+      GDPData('Hilmi', 0),
+      GDPData('Daniyal', 42),
+      GDPData('Daniyalu', 0),
+      GDPData('Daniyala', 68),
     ];
     return chartData;
   }

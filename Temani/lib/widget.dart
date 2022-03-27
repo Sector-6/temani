@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percobaan_pertama/information_icons.dart';
 import 'background.dart';
 import 'cardhome.dart';
 import 'cardCategory.dart';
@@ -77,7 +78,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
               const Flexible(flex: 40, child: CardHome()),
               Flexible(
-                  flex: 28,
+                  flex: 5,
                   child: Container(
                     //color: Colors.blue,
                     child: Column(
@@ -106,7 +107,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                     alignment: Alignment.centerRight,
                                     child: Text(
                                       "See all",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Color(0XFFFF93A3)),
                                       textAlign: TextAlign.left,
                                     ),
                                   ),
@@ -114,17 +117,26 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                               ],
                             ),
                           ),
-                        ),
-                        Container(
-                          child: const CardCategory(),
                         ),
                       ],
                     ),
                   )),
               Flexible(
-                  flex: 56,
+                flex: 23,
+                child: Container(
+                    // color: Colors.red,
+                    child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    CardCategory(),
+                  ],
+                  //color: Colors.blue,
+                )),
+              ),
+              Flexible(
+                  flex: 5,
                   child: Container(
-                    //color: Colors.blue,
+                    // color: Colors.blue,
                     child: Column(
                       children: [
                         Align(
@@ -139,7 +151,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                       alignment: Alignment.centerLeft,
                                       child: Container(
                                         child: Text(
-                                          "Category",
+                                          "Discover",
                                           style: TextStyle(fontSize: 20),
                                           textAlign: TextAlign.left,
                                         ),
@@ -151,7 +163,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                     alignment: Alignment.centerRight,
                                     child: Text(
                                       "See all",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Color(0XFFFF93A3)),
                                       textAlign: TextAlign.left,
                                     ),
                                   ),
@@ -160,12 +174,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                             ),
                           ),
                         ),
-                        Container(
-                          child: const CardDiscover(),
-                        ),
                       ],
                     ),
                   )),
+              Flexible(
+                flex: 46,
+                child: Container(
+                    // color: Colors.red,
+                    child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    CardDiscover(),
+                  ],
+                  //color: Colors.blue,
+                )),
+              ),
             ],
           ),
         ),
@@ -184,7 +207,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return const <BottomNavigationBarItem>[
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.home,
+          Information.home,
           color: Color(0xFFB7B7B7),
         ),
         label: '',
@@ -192,7 +215,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.wifi_calling_3,
+          Information.phone_call,
           color: Color(0xFFB7B7B7),
         ),
         label: '',
@@ -200,7 +223,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.location_on_sharp,
+          Information.location,
           color: Color(0xFFB7B7B7),
         ),
         label: '',
@@ -208,7 +231,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.message_rounded,
+          Information.message,
           color: Color(0xFFB7B7B7),
         ),
         label: '',
@@ -216,7 +239,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.person,
+          Information.user,
           color: Color(0xFFB7B7B7),
         ),
         label: '',
