@@ -24,7 +24,7 @@ class _dataBackgroundState extends State<dataBackground> {
       alignment: Alignment.center,
       transform: Matrix4.rotationY(math.pi),
       child: Container(
-        height: 150,
+        height: 180,
         color: Colors.transparent,
         child: SfCircularChart(
           tooltipBehavior: _tooltipBehavior,
