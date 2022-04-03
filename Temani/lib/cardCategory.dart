@@ -11,7 +11,7 @@ class CardCategory extends StatelessWidget {
     return SafeArea(
       // backgroundColor: Colors.transparent,
       child: Container(
-        margin: const EdgeInsets.all(10),
+        padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
         child: Row(
           children: <Widget>[
             CategoryCard(Information.vector, "Informations", Color(0xFF031B88)),
@@ -30,7 +30,7 @@ class CardCategory extends StatelessWidget {
     return Card(
       elevation: 10,
       color: coloring,
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
       child: Container(
         height: 65,
         width: 57,

@@ -1,8 +1,5 @@
-// import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-// import 'package:syncfusion_flutter_charts/chart.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 class dataSetKrim extends StatefulWidget {
@@ -27,7 +24,7 @@ class _dataSetKrimState extends State<dataSetKrim> {
       alignment: Alignment.center,
       transform: Matrix4.rotationY(math.pi),
       child: Container(
-        height: 150,
+        height: 180,
         color: Colors.transparent,
         child: SfCircularChart(
           tooltipBehavior: _tooltipBehavior,
